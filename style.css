@@ -1,0 +1,386 @@
+@import url('https://fonts.cdnfonts.com/css/cantika');
+@import url('https://fonts.cdnfonts.com/css/progress-3');
+@import url('https://fonts.cdnfonts.com/css/varuna');
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(34, 33, 33);
+    color: aliceblue;
+    background-image: url(asset/Source/bg\ fruits.png);
+    background-size: 100%;
+    background-repeat: repeat;
+    background-blend-mode:soft-light;
+    font-family: 'VARUNA', sans-serif;
+}
+header{
+    display: flex;
+    position: sticky;
+    top: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(26, 24, 24, 0.35);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(30px);
+    box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(65, 58, 58, 0.568);
+    margin: 10px;
+    height: 65px;
+    padding: 0px 10px;
+    border-radius: 50px;
+    overflow: hidden;
+    z-index: 100;
+
+    #webName{
+        padding: 15px 0px 5px 1% ;
+        font-size: 2rem;
+        font-family: 'cantika', sans-serif;
+        width: 25%;
+    }
+    nav{
+        display: flex;
+        width: fit-content;
+        justify-content: space-around;
+        align-items: flex-end;
+        cursor: pointer;
+        gap: 5vh;
+        height: 100%;
+    }
+    .search{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 25%;
+        #userSearch{
+            resize: none;
+            position: relative;
+            font-size: .8rem;
+            width: 20px;
+            height: 12px;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            padding: 10.5px;
+            color: #fdfdfd00;
+            background-color: rgba(78, 77, 77, 0.562);
+            background: url(asset/icons/search\ draw.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            font-family: "Hubot Sans", sans-serif;
+            transition: width 1s cubic-bezier(0.8, -0.6, 0.27, 1.55),
+                color 0.5s ease;
+        }
+        #userSearch:focus{
+            width: 150px;
+            cursor:auto;
+            padding: 10.5px;
+            padding-left: 38px;
+            background-position: 2px 0px;
+            color: #d3e7d4;
+            background-color: rgba(78, 77, 77, 0.562);
+        }
+    }
+}
+
+.welContent{
+    width: 100%;
+    height: fit-content;
+    font-family: 'Progress', sans-serif;
+}
+.welcome{
+    display: flex;
+    position: relative;
+    background-color: rgb(58, 58, 57, 0.25);
+    backdrop-filter: blur(20px);
+    padding: 100px;
+    margin: 20px;
+    height: 250px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(129, 126, 126, 0.452);
+    .text{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        right: -30%;
+        align-items: end;
+        .welText{
+            font-size: 80px;
+            text-align: end;
+        }
+        h1{
+            margin: 0;
+            font-weight: none;
+            text-align: end;
+        }
+    }
+    .welImg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        img{
+            height: 700px;
+            opacity: 0.8;
+        }
+    }
+}
+
+#adOfProduct{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(77, 73, 68, 0.089);
+    height: fit-content;
+    padding: 20px 10px;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(129, 126, 126, 0.452);
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    margin: 20px;
+    border-radius: 20px;
+    width: 270px;
+    min-width: 250px;
+    height: 380px;
+    background-color: rgb(255, 255, 255);
+    transition: .15s linear;
+}
+/* HOVERING EFFECT ON CARDS */
+.card:hover{
+    scale: 1.02;
+    box-shadow: 0 0 30px 10px rgba(253, 255, 107, 0.5);
+}
+#cimg{
+width: 200px;
+height: 200px;
+overflow: hidden;
+border-radius: 100px;
+margin-top: 20px;
+img{
+    position: relative;
+    height: 100%;
+    width: fit-content;
+    left: var(--move);
+}
+}
+.packName{
+    text-align: center;
+    color: black;
+    margin-top: 15px;
+    padding: 0px 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.packDesc{
+    /* text-align: left; */
+    margin: 0 0 10px 0;
+    padding: 5px 20px;
+    color: black;
+    height: 50px;
+}
+.journey{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    background-color: rgba(33, 35, 48, 0.5);
+    border: 1px solid rgba(69, 69, 87, 0.788);
+    backdrop-filter: blur(25px);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    gap: 15px;
+}
+.iimg{
+    height: 300px;
+    width: 350px;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        height: 300px;
+    }
+}
+.story{
+    width: 100%;
+    /* padding: 15px; */
+    margin: 0;
+    max-width: 100%;
+    h1{
+        font-weight: none;
+        letter-spacing: 1.2px;
+    }
+}
+
+.pricing{
+    margin: 10px 0;
+    padding: 20px;
+    background-color: rgb(44, 44, 44);
+    color: #fafcff;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    background: rgb(43, 43, 43);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    border: none;
+}
+thead {
+    background: #444444;
+    color: aliceblue;
+}
+th, td {
+    padding: 15px;
+    border: 1px solid #63636373;
+}
+th {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+}
+td {
+    font-size: 14px;
+    color: #ffffff;
+}
+.check {
+    color: #5aff5a;
+    font-size: 20px;
+}
+.not{
+    color: rgb(124, 124, 124);
+    font-weight: bold;
+    font-size: 20px;
+}
+.highlight {
+    font-weight: bold;
+    color: #2aff35;
+}
+
+tr:hover {
+    text-shadow: 0 0 10px #dbdbdb;
+}
+
+
+
+
+body::-webkit-scrollbar{
+    width: 4px;
+}
+body::-webkit-scrollbar-track{
+    background: transparent;
+}
+body::-webkit-scrollbar-thumb{
+    background: rgb(143, 143, 143);
+    border-radius: 20px;
+}
+footer{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(44, 45, 49);
+    padding: 20px 0px;
+    ftitle{
+        font-size: 2rem;
+        font-weight: none;
+        letter-spacing: 1.2px;
+        color: #eeff00;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 460px) {
+    body{
+        background-position: 50% -60%;
+        background-size: 150%;
+    }
+    header{
+        #webName{
+            font-size: 1.5rem;
+        }
+        nav{
+            font-size: .7rem;
+            align-items: end;
+        }
+        .search{
+            #userSearch{
+                /* background-color: rgb(46, 46, 46); */
+                height: 10px;
+                width: 10px;
+            }
+            #userSearch:focus{
+                background: none;
+                width: 90px;
+                height: 15px;
+                padding: 5px;
+                background-color: rgb(65, 64, 64);
+            }
+        }
+    }
+    .welcome{
+        height: 100%;
+        .text{
+            position: relative;
+            right: -70px;
+            .welText{
+                font-size: 35px;
+            }
+            h1{
+                font-size: 20px;
+            }
+        }
+        .welImg{
+            img{
+                position: relative;
+                height: 400px;
+                left: -60px;
+                bottom: -30px;
+            }
+        }
+    }
+    #adOfProduct{
+        #cimg{
+            margin-top: 20px;
+        }
+    }.card{
+        height: 350px;
+    }
+    .packName{
+        font-size: 1.2rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    .packDesc{
+        font-size: .8rem;
+    }
+    .journey{
+        flex-direction: column;
+    }
+}
